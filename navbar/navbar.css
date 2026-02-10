@@ -23,10 +23,22 @@
     align-items: center;
 }
 
+.logo-section a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.logo-section a:hover {
+    opacity: 0.8;
+}
+
 .logo-img {
     height: 50px;
     width: auto;
     object-fit: contain;
+    cursor: pointer;
 }
 
 .nav-menu {
