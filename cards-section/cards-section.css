@@ -1,0 +1,40 @@
+/* Cards Section */
+.cards-section {
+    width: 100%;
+    position: relative;
+    background-color: #070016;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.cards-container {
+    width: 100%;
+    max-width: 100%;
+    position: relative;
+}
+
+.cards-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    margin: 0;
+    padding: 0;
+    opacity: 0.9; /* Reduced opacity by 10% (from 1.0 to 0.9) */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cards-section {
+        padding: 0;
+    }
+    
+    .cards-image {
+        width: 100%;
+        height: auto;
+    }
+}

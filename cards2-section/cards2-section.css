@@ -1,0 +1,90 @@
+/* Cards2 Section - Thin Horizontal Highlight Strip */
+
+.cards2-section {
+    width: 100%;
+    background-color: #070016; /* Match current theme */
+    height: 180px; /* Increased height desktop */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.cards2-container {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px; /* Increased spacing */
+    padding: 0 24px;
+}
+
+/* Main Heading: Increased font size */
+.cards2-heading {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-size: 48px; /* Increased font size */
+    font-weight: 600; /* font-semibold */
+    text-align: center;
+    margin: 0;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+}
+
+.cards2-heading .text-white {
+    color: #ffffff;
+}
+
+/* Highlight "Power" with purple gradient */
+.cards2-heading .text-purple {
+    background: linear-gradient(to right, #a78bfa, #f472b6); /* from-purple-400 to-pink-400 */
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+/* Sub-text: Increased font size */
+.cards2-subtext {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-size: 18px; /* Increased font size */
+    font-weight: 400;
+    color: #9ca3af; /* text-gray-400 */
+    text-align: center;
+    margin: 0;
+    letter-spacing: 0.05em; /* Slight letter spacing for premium feel */
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .cards2-section {
+        height: 180px; /* Increased height desktop */
+    }
+    
+    /* Heading: Increased size */
+    .cards2-heading {
+        font-size: 56px; /* Increased font size */
+    }
+    
+    /* Sub-text: Increased size */
+    .cards2-subtext {
+        font-size: 20px; /* Increased font size */
+    }
+}
+
+@media (max-width: 767px) {
+    .cards2-section {
+        height: 140px; /* Increased height mobile */
+    }
+    
+    .cards2-heading {
+        font-size: 36px; /* Increased */
+    }
+    
+    .cards2-subtext {
+        font-size: 16px; /* Increased */
+    }
+}

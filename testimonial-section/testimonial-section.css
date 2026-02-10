@@ -1,0 +1,342 @@
+/* Testimonial Section - Centered Premium Agency Layout */
+
+/* Section Layout: Large vertical spacing */
+.testimonial-section {
+    width: 100%;
+    background-color: #070016;
+    padding-top: 128px; /* py-32 desktop */
+    padding-bottom: 128px; /* py-32 desktop */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Content Width System: max-w-6xl mx-auto px-6 */
+.testimonial-container {
+    max-width: 1152px; /* max-w-6xl */
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 24px; /* px-6 */
+    padding-right: 24px; /* px-6 */
+    position: relative;
+    z-index: 1;
+}
+
+/* Heading Block */
+.heading-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 80px; /* Large breathing space */
+}
+
+/* Main Heading: text-4xl md:text-5xl font-semibold center aligned */
+.main-heading {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-size: 36px; /* text-4xl */
+    font-weight: 600; /* font-semibold */
+    letter-spacing: -0.025em; /* tracking-tight */
+    text-align: center;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.main-heading .text-white {
+    color: #ffffff; /* text-white */
+}
+
+/* Gradient highlight word "Say": from-purple-400 to-pink-400 with bg-clip-text */
+.main-heading .text-purple {
+    background: linear-gradient(to right, #a78bfa, #f472b6); /* from-purple-400 to-pink-400 */
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+/* Subtitle: text-sm md:text-base text-gray-400 mt-4 max-w-2xl centered */
+.subtitle {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-size: 14px; /* text-sm */
+    font-weight: 400;
+    color: #9ca3af; /* text-gray-400 */
+    line-height: 1.625;
+    margin: 16px 0 0 0; /* mt-4 */
+    text-align: center;
+    max-width: 672px; /* max-w-2xl */
+}
+
+/* Testimonials Carousel: Single testimonial display with auto-rotation */
+.testimonials-carousel {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.testimonials-wrapper {
+    position: relative;
+    width: 100%;
+    min-height: 400px;
+}
+
+/* Testimonial Block: Individual testimonial card */
+.testimonial-block {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.6s ease, visibility 0.6s ease;
+    pointer-events: none;
+}
+
+.testimonial-block.active {
+    opacity: 1;
+    visibility: visible;
+    position: relative;
+    pointer-events: auto;
+}
+
+
+/* Testimonial Content: Centered vertical layout */
+.testimonial-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 32px; /* Space between image and text */
+    position: relative;
+    z-index: 1;
+    width: 100%;
+}
+
+/* Profile Image: 112px circle, purple glow, gradient overlay */
+.client-image {
+    width: 112px;
+    height: 112px;
+    flex-shrink: 0;
+    border-radius: 50%; /* Circular */
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 0 40px rgba(168, 85, 247, 0.35); /* shadow-[0_0_40px_rgba(168,85,247,0.35)] */
+}
+
+/* Subtle purple gradient overlay */
+.client-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(168, 85, 247, 0.25), rgba(139, 92, 246, 0.2));
+    mix-blend-mode: overlay;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.client-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Testimonial Text Container: Centered */
+.testimonial-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 24px; /* Space between quote and client info */
+    max-width: 100%;
+}
+
+/* Quote Text: text-xl md:text-2xl text-gray-200 relaxed line height */
+.quote {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-size: 18px; /* text-lg */
+    font-weight: 400;
+    color: #e5e7eb; /* text-gray-200 */
+    line-height: 1.7; /* relaxed */
+    margin: 0;
+    font-style: normal;
+    letter-spacing: -0.01em;
+    max-width: 100%;
+}
+
+/* Client Info: space-y-1 */
+.client-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px; /* space-y-1 */
+    align-items: center;
+}
+
+/* Client Name: text-white font-medium */
+.client-name {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-size: 16px;
+    font-weight: 500; /* font-medium */
+    color: #ffffff; /* text-white */
+    margin: 0;
+}
+
+/* Client Title: text-gray-400 text-sm */
+.client-title {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-size: 14px; /* text-sm */
+    font-weight: 400;
+    color: #9ca3af; /* text-gray-400 */
+    margin: 0;
+}
+
+/* Carousel Indicators */
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-top: 48px;
+    flex-wrap: wrap;
+}
+
+.indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.indicator:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    transform: scale(1.2);
+}
+
+.indicator.active {
+    background-color: #a78bfa;
+    width: 32px;
+    border-radius: 5px;
+    box-shadow: 0 0 12px rgba(167, 139, 250, 0.5);
+}
+
+/* Responsive Design */
+
+/* Tablet and up - md breakpoint */
+@media (min-width: 768px) {
+    /* Main heading: md:text-5xl */
+    .main-heading {
+        font-size: 48px; /* text-5xl */
+    }
+    
+    /* Subtitle: md:text-base */
+    .subtitle {
+        font-size: 16px; /* text-base */
+    }
+    
+    /* Quote: md:text-xl */
+    .quote {
+        font-size: 20px; /* text-xl */
+    }
+    
+    /* Increase spacing between image and text */
+    .testimonial-content {
+        gap: 40px;
+    }
+    
+    .testimonials-wrapper {
+        min-height: 450px;
+    }
+}
+
+/* Larger screens */
+@media (min-width: 1024px) {
+    .testimonial-content {
+        gap: 48px;
+    }
+}
+
+/* Mobile: py-20 (80px) */
+@media (max-width: 767px) {
+    .testimonial-section {
+        padding-top: 80px; /* py-20 mobile */
+        padding-bottom: 80px; /* py-20 mobile */
+    }
+    
+    .main-heading {
+        font-size: 32px;
+    }
+    
+    .heading-block {
+        margin-bottom: 60px;
+    }
+    
+    .testimonials-wrapper {
+        min-height: 380px;
+    }
+    
+    .testimonial-content {
+        gap: 28px;
+    }
+    
+    .client-image {
+        width: 96px;
+        height: 96px;
+    }
+    
+    .quote {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .testimonial-section {
+        padding-top: 64px;
+        padding-bottom: 64px;
+    }
+    
+    .main-heading {
+        font-size: 28px;
+    }
+    
+    .subtitle {
+        font-size: 13px;
+    }
+    
+    .client-image {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%; /* Ensure circular on mobile too */
+    }
+    
+    .testimonials-wrapper {
+        min-height: 350px;
+    }
+    
+    .quote {
+        font-size: 16px;
+    }
+    
+    .testimonial-content {
+        gap: 24px;
+    }
+    
+    .carousel-indicators {
+        margin-top: 32px;
+        gap: 8px;
+    }
+    
+    .indicator {
+        width: 8px;
+        height: 8px;
+    }
+    
+    .indicator.active {
+        width: 24px;
+    }
+}

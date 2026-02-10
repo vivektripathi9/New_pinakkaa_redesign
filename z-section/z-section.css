@@ -1,0 +1,229 @@
+/* Z Section - Premium Dark Why Choose Us */
+
+/* Section Container: Full-width with large vertical padding */
+.z-section {
+    width: 100%;
+    background-color: #070016; /* Match current theme */
+    padding-top: 128px; /* py-32 desktop */
+    padding-bottom: 128px; /* py-32 desktop */
+}
+
+/* Content Container: max-w-6xl mx-auto px-6 */
+.z-container {
+    max-width: 1152px; /* max-w-6xl */
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 24px; /* px-6 */
+    padding-right: 24px; /* px-6 */
+}
+
+/* Heading: text-4xl md:text-5xl font-semibold center aligned */
+.z-heading {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-size: 36px; /* text-4xl */
+    font-weight: 600; /* font-semibold */
+    letter-spacing: -0.025em;
+    text-align: center;
+    margin: 0 0 64px 0; /* mt-16 margin-bottom */
+}
+
+.z-heading .text-white {
+    color: #ffffff;
+}
+
+/* Highlight "Choose" with purple gradient */
+.z-heading .text-purple {
+    background: linear-gradient(to right, #a78bfa, #f472b6); /* from-purple-400 to-pink-400 */
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+/* Top Description Row: 2-column grid md:grid-cols-2 gap-16 */
+.z-description-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 64px; /* gap-16 */
+    margin-bottom: 64px; /* mt-16 before cards */
+    align-items: start;
+}
+
+/* Description Column */
+.z-description-column {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Small uppercase label: text-xs tracking-[0.25em] text-gray-400 */
+.z-label {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-size: 12px; /* text-xs */
+    font-weight: 400;
+    letter-spacing: 0.25em; /* tracking-[0.25em] */
+    text-transform: uppercase;
+    color: #9ca3af; /* text-gray-400 */
+    margin-bottom: 16px;
+}
+
+/* Paragraph text: text-gray-300 leading-relaxed max-w-md */
+.z-text {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #d1d5db; /* text-gray-300 */
+    line-height: 1.625; /* leading-relaxed */
+    max-width: 448px; /* max-w-md */
+    margin: 0;
+}
+
+/* Feature Cards Grid: mt-16, 2 columns desktop, 1 mobile */
+.z-cards-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px; /* gap-10 */
+    margin-top: 64px; /* mt-16 */
+}
+
+/* Card Design: rounded-2xl, glassy background, hover effects */
+.z-card {
+    background: rgba(255, 255, 255, 0.05); /* bg-white/5 */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* border-white/10 */
+    border-radius: 16px; /* rounded-2xl */
+    overflow: hidden;
+    backdrop-filter: blur(4px); /* backdrop-blur-sm */
+    transition: all 0.3s ease;
+}
+
+.z-card:hover {
+    transform: translateY(-4px); /* hover:-translate-y-1 */
+    box-shadow: 0 10px 30px rgba(167, 139, 250, 0.2); /* Soft purple glow */
+}
+
+/* Card Image: Wide banner at top */
+.z-card-image {
+    width: 100%;
+    height: 192px; /* h-48 */
+    position: relative;
+    overflow: hidden;
+}
+
+.z-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Subtle purple gradient overlay */
+.z-image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(167, 139, 250, 0.1), transparent);
+    pointer-events: none;
+}
+
+/* Card Content: p-6, space-y-2 */
+.z-card-content {
+    padding: 24px; /* p-6 */
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* space-y-2 */
+}
+
+/* Card Title: text-white font-medium text-lg */
+.z-card-title {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-size: 18px; /* text-lg */
+    font-weight: 500; /* font-medium */
+    color: #ffffff; /* text-white */
+    margin: 0;
+}
+
+/* Card Description: text-gray-400 text-sm leading-relaxed mt-2 */
+.z-card-description {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-size: 14px; /* text-sm */
+    font-weight: 400;
+    color: #9ca3af; /* text-gray-400 */
+    line-height: 1.625; /* leading-relaxed */
+    margin: 0;
+}
+
+/* Responsive Design */
+
+/* Tablet and up - md breakpoint */
+@media (min-width: 768px) {
+    /* Heading: md:text-5xl */
+    .z-heading {
+        font-size: 48px; /* text-5xl */
+    }
+    
+    /* 2-column grid for descriptions */
+    .z-description-row {
+        grid-template-columns: repeat(2, 1fr); /* md:grid-cols-2 */
+    }
+    
+    /* 2-column grid for cards */
+    .z-cards-grid {
+        grid-template-columns: repeat(2, 1fr); /* md:grid-cols-2 */
+        gap: 48px; /* gap-12 */
+    }
+    
+    .z-card-image {
+        height: 160px; /* h-40 */
+    }
+}
+
+/* Desktop adjustments */
+@media (min-width: 1024px) {
+    .z-cards-grid {
+        gap: 48px; /* Maintain gap-12 */
+    }
+}
+
+/* Mobile: py-20 (80px) */
+@media (max-width: 767px) {
+    .z-section {
+        padding-top: 80px; /* py-20 mobile */
+        padding-bottom: 80px; /* py-20 mobile */
+    }
+    
+    .z-heading {
+        font-size: 32px;
+        margin-bottom: 48px;
+    }
+    
+    .z-description-row {
+        gap: 40px;
+        margin-bottom: 48px;
+    }
+    
+    .z-cards-grid {
+        gap: 32px;
+        margin-top: 48px;
+    }
+    
+    .z-card-image {
+        height: 160px;
+    }
+}
+
+@media (max-width: 480px) {
+    .z-section {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    
+    .z-heading {
+        font-size: 28px;
+    }
+    
+    .z-card-content {
+        padding: 20px;
+    }
+}

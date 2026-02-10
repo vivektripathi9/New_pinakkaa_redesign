@@ -1,0 +1,200 @@
+/* Creative Touch Section */
+.creative-touch-section {
+    width: 1920px;
+    min-height: 80vh;
+    background-image: url('99bd9bc9de5876951c1877abd5b071f570979451.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    overflow: hidden;
+    padding-top: 180px;
+    padding-bottom: 160px;
+}
+
+.creative-touch-container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.main-heading {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-size: 56px;
+    font-weight: 600;
+    text-align: center;
+    margin: 0 0 120px 0;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+}
+
+.main-heading .text-white {
+    color: #ffffff;
+}
+
+.main-heading .text-purple {
+    background: linear-gradient(135deg, #9d4edd 0%, #c77dff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.content-columns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 120px;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 160px; /* Increased margin to push content down even more */
+}
+
+.content-column {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.content-column:nth-child(2) {
+    transform: translateY(60px);
+}
+
+.percentage {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-size: 72px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 20px 0;
+    line-height: 1;
+}
+
+.column-title {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0 0 16px 0;
+    line-height: 1.3;
+}
+
+.column-description {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: rgba(224, 224, 224, 0.7);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1920px) {
+    .creative-touch-section {
+        width: 100%;
+        max-width: 1920px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .creative-touch-section {
+        width: 100%;
+        min-height: 80vh;
+        padding-top: 150px;
+        padding-bottom: 140px;
+    }
+    
+    .main-heading {
+        font-size: 42px;
+        margin-bottom: 100px;
+    }
+    
+    .content-columns {
+        grid-template-columns: 1fr;
+        gap: 60px;
+        margin-top: 0;
+    }
+    
+    .content-column:nth-child(2) {
+        transform: translateY(0);
+    }
+    
+    .percentage {
+        font-size: 64px;
+    }
+    
+    .column-title {
+        font-size: 19px;
+    }
+    
+    .column-description {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .creative-touch-section {
+        width: 100%;
+        min-height: 80vh;
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+    
+    .main-heading {
+        font-size: 36px;
+        margin-bottom: 80px;
+    }
+    
+    .content-columns {
+        gap: 50px;
+    }
+    
+    .percentage {
+        font-size: 56px;
+    }
+    
+    .column-title {
+        font-size: 18px;
+    }
+    
+    .column-description {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .creative-touch-section {
+        width: 100%;
+        min-height: 80vh;
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+    
+    .main-heading {
+        font-size: 32px;
+        margin-bottom: 70px;
+    }
+    
+    .content-columns {
+        gap: 50px;
+    }
+    
+    .percentage {
+        font-size: 48px;
+    }
+    
+    .column-title {
+        font-size: 18px;
+    }
+    
+    .column-description {
+        font-size: 14px;
+    }
+}
