@@ -240,11 +240,32 @@
     .footer-content {
         gap: 32px;
         padding-bottom: 40px;
+        text-align: center;
+    }
+    
+    .footer-branding {
+        align-items: center;
     }
     
     .footer-navigation {
         grid-template-columns: repeat(2, 1fr);
         gap: 32px;
+    }
+    
+    .nav-column {
+        align-items: center;
+    }
+    
+    .nav-links {
+        align-items: center;
+    }
+    
+    .footer-contact-card {
+        text-align: center;
+    }
+    
+    .contact-address {
+        align-items: center;
     }
     
     .footer-bottom {
