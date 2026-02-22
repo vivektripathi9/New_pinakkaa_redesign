@@ -66,17 +66,107 @@
     font-weight: 500;
 }
 
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    z-index: 1001;
+    transition: transform 0.3s ease;
+}
+
+.hamburger:hover {
+    transform: scale(1.1);
+}
+
+.hamburger-line {
+    width: 28px;
+    height: 3px;
+    background-color: #ffffff;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.hamburger.active .hamburger-line:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger.active .hamburger-line:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .hamburger-line:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
 /* Responsive Design */
-@media (max-width: 768px) {
-    .nav-container {
-        padding: 0 20px;
-        flex-direction: column;
-        gap: 20px;
+@media (max-width: 968px) {
+    .hamburger {
+        display: flex;
     }
     
     .nav-menu {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
+        position: fixed;
+        top: 90px;
+        right: -100%;
+        width: 280px;
+        height: calc(100vh - 90px);
+        background-color: rgba(0, 0, 0, 0.98);
+        backdrop-filter: blur(20px);
+        flex-direction: column;
+        padding: 40px 20px;
+        gap: 0;
+        align-items: flex-start;
+        transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: -5px 0 20px rgba(0, 0, 0, 0.5);
+        border-left: 1px solid rgba(255, 255, 255, 0.1);
+        overflow-y: auto;
+    }
+    
+    .nav-menu.active {
+        right: 0;
+    }
+    
+    .nav-menu li {
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .nav-menu li a {
+        display: block;
+        padding: 18px 20px;
+        font-size: 16px;
+        width: 100%;
+        transition: all 0.3s ease;
+    }
+    
+    .nav-menu li a:hover {
+        background-color: rgba(167, 139, 250, 0.1);
+        padding-left: 30px;
+        color: #a78bfa;
+    }
+    
+    .nav-menu li a.active {
+        background-color: rgba(167, 139, 250, 0.15);
+        border-left: 3px solid #a78bfa;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-container {
+        padding: 0 20px;
+    }
+    
+    .nav-menu {
+        width: 100%;
+        right: -100%;
+    }
+    
+    .nav-menu.active {
+        right: 0;
     }
 }

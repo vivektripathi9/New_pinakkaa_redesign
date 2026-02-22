@@ -81,6 +81,7 @@ html {
     margin-bottom: 24px;
     letter-spacing: -0.025em;
     line-height: 1.2;
+    color: #ffffff;
 }
 
 .services-hero-title .text-white {
@@ -88,12 +89,7 @@ html {
 }
 
 .services-hero-title .text-purple {
-    color: #9d4edd;
-    background: linear-gradient(135deg, #9d4edd 0%, #c77dff 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-shadow: 0 0 30px rgba(157, 78, 221, 0.5);
+    color: #ffffff;
 }
 
 .services-hero-subtitle {
@@ -366,6 +362,7 @@ html {
     letter-spacing: -0.025em;
     line-height: 1.2;
     text-align: center;
+    color: #ffffff;
 }
 
 .service-detail-subtitle {
