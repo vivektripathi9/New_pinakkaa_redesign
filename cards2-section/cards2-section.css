@@ -8,7 +8,7 @@
     align-items: center;
     justify-content: center;
     margin: 0;
-    padding: 0;
+    padding: 36px 0 0;
     overflow: hidden;
 }
 
@@ -78,6 +78,7 @@
 @media (max-width: 767px) {
     .cards2-section {
         height: 140px; /* Increased height mobile */
+        padding-top: 24px;
     }
     
     .cards2-heading {
