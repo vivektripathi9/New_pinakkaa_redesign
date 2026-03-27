@@ -10,6 +10,24 @@
     overflow: hidden;
 }
 
+.testimonial-bg-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.testimonial-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(7, 0, 22, 0.72) 0%, rgba(7, 0, 22, 0.84) 100%);
+    z-index: 1;
+    pointer-events: none;
+}
+
 /* Content Width System: max-w-6xl mx-auto px-6 */
 .testimonial-container {
     max-width: 1152px; /* max-w-6xl */
@@ -18,7 +36,7 @@
     padding-left: 24px; /* px-6 */
     padding-right: 24px; /* px-6 */
     position: relative;
-    z-index: 1;
+    z-index: 2;
 }
 
 /* Heading Block */
@@ -31,7 +49,7 @@
 }
 
 /* Main Heading: text-4xl md:text-5xl font-semibold center aligned */
-.main-heading {
+.testimonial-section .main-heading {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     font-size: 36px; /* text-4xl */
     font-weight: 600; /* font-semibold */
@@ -41,12 +59,12 @@
     line-height: 1.2;
 }
 
-.main-heading .text-white {
+.testimonial-section .main-heading .text-white {
     color: #ffffff; /* text-white */
 }
 
 /* Gradient highlight word "Say": from-purple-400 to-pink-400 with bg-clip-text */
-.main-heading .text-purple {
+.testimonial-section .main-heading .text-purple {
     background: linear-gradient(to right, #a78bfa, #f472b6); /* from-purple-400 to-pink-400 */
     -webkit-background-clip: text;
     background-clip: text;

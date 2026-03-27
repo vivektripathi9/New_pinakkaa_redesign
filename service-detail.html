@@ -60,7 +60,7 @@
         <div class="service-detail-container">
             <div class="service-detail-main">
                 <div class="service-detail-image" id="serviceDetailImage">
-                    <video id="serviceVideoSrc" autoplay loop muted playsinline style="display: none;">
+                    <video id="serviceVideoSrc" autoplay loop muted playsinline preload="metadata" style="display: none;">
                         <source src="" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
@@ -239,7 +239,8 @@
     </footer>
 
     <script src="navbar/navbar.js"></script>
-    <script src="services-pages/services-pages.js"></script>
-    <script src="services-pages/service-detail.js"></script>
+    <script src="services-pages/services-pages.js" defer></script>
+    <script src="services-pages/service-detail.js" defer></script>
+    <script src="performance.js" defer></script>
 </body>
 </html>

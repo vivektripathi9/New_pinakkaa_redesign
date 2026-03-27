@@ -2,7 +2,7 @@
 .services-section {
     width: 100%;
     background-color: #070016;
-    padding: 100px 10%;
+    padding: 88px 6%;
     position: relative;
 }
 
@@ -55,7 +55,8 @@
 }
 
 .service-card {
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
     height: 304px;
     background-color: rgba(157, 78, 221, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -160,7 +161,7 @@
 
 @media (max-width: 768px) {
     .services-section {
-        padding: 60px 5%;
+        padding: 56px 4%;
     }
     
     .services-heading {
@@ -175,9 +176,10 @@
     
     .service-card {
         width: 100%;
-        max-width: 400px;
+        max-width: 100%;
         height: auto;
-        min-height: 304px;
+        min-height: 280px;
+        padding: 22px;
     }
     
     .service-image {
@@ -195,7 +197,7 @@
 
 @media (max-width: 480px) {
     .services-section {
-        padding: 40px 5%;
+        padding: 44px 14px;
     }
     
     .services-heading {
@@ -204,10 +206,10 @@
     }
     
     .service-card {
-        padding: 20px;
+        padding: 18px;
     }
     
     .service-image {
-        height: 150px;
+        height: 132px;
     }
 }

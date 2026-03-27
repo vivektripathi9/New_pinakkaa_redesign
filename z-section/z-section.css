@@ -6,6 +6,26 @@
     background-color: #070016; /* Match current theme */
     padding-top: 128px; /* py-32 desktop */
     padding-bottom: 128px; /* py-32 desktop */
+    position: relative;
+    overflow: hidden;
+}
+
+.z-bg-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.z-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(7, 0, 22, 0.72) 0%, rgba(7, 0, 22, 0.85) 100%);
+    z-index: 1;
+    pointer-events: none;
 }
 
 /* Content Container: max-w-6xl mx-auto px-6 */
@@ -15,6 +35,8 @@
     margin-right: auto;
     padding-left: 24px; /* px-6 */
     padding-right: 24px; /* px-6 */
+    position: relative;
+    z-index: 2;
 }
 
 /* Heading: text-4xl md:text-5xl font-semibold center aligned */
@@ -25,6 +47,9 @@
     letter-spacing: -0.025em;
     text-align: center;
     margin: 0 0 64px 0; /* mt-16 margin-bottom */
+    opacity: 0;
+    transform: translateY(24px);
+    animation: zHeadingReveal 900ms ease-out forwards;
 }
 
 .z-heading .text-white {
@@ -38,6 +63,42 @@
     background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
+    display: inline-block;
+    animation: zHeadingPulse 2.2s ease-in-out 1s infinite;
+}
+
+@keyframes zHeadingReveal {
+    0% {
+        opacity: 0;
+        transform: translateY(24px);
+        letter-spacing: -0.05em;
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        letter-spacing: -0.025em;
+    }
+}
+
+@keyframes zHeadingPulse {
+    0%,
+    100% {
+        filter: drop-shadow(0 0 0 rgba(167, 139, 250, 0));
+        transform: translateY(0);
+    }
+    50% {
+        filter: drop-shadow(0 0 12px rgba(167, 139, 250, 0.6));
+        transform: translateY(-2px);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .z-heading,
+    .z-heading .text-purple {
+        animation: none;
+        opacity: 1;
+        transform: none;
+    }
 }
 
 /* Top Description Row: 2-column grid md:grid-cols-2 gap-16 */

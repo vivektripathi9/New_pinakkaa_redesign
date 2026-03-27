@@ -12,7 +12,7 @@
 /* Banner Section - Rectangle */
 .contact-banner {
     width: 100%;
-    height: 400px;
+    height: clamp(240px, 38vw, 500px);
     position: relative;
     overflow: hidden;
     background: linear-gradient(135deg, #1a0a2e 0%, #2d1b3d 100%);
