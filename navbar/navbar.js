@@ -35,14 +35,18 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // Navbar background on scroll
-    window.addEventListener('scroll', function() {
+    // Make navbar transparent after scrolling down
+    function updateNavbarOnScroll() {
+        if (!navbar) return;
         if (window.scrollY > 50) {
-            navbar.style.backgroundColor = 'rgba(0, 0, 0, 0.95)';
+            navbar.classList.add('navbar-transparent');
         } else {
-            navbar.style.backgroundColor = 'rgba(0, 0, 0, 0.7)';
+            navbar.classList.remove('navbar-transparent');
         }
-    });
+    }
+
+    window.addEventListener('scroll', updateNavbarOnScroll);
+    updateNavbarOnScroll();
     
     // Smooth scrolling for navigation links
     document.querySelectorAll('.nav-menu a').forEach(anchor => {
