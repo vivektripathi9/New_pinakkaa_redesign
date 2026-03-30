@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
             hamburger.classList.toggle('active');
             navMenu.classList.toggle('active');
             document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
+            updateNavbarAppearance();
         });
     }
     
@@ -20,6 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 hamburger.classList.remove('active');
                 navMenu.classList.remove('active');
                 document.body.style.overflow = '';
+                updateNavbarAppearance();
             }
         });
     });
@@ -31,22 +33,49 @@ document.addEventListener('DOMContentLoaded', function() {
                 hamburger.classList.remove('active');
                 navMenu.classList.remove('active');
                 document.body.style.overflow = '';
+                updateNavbarAppearance();
             }
         }
     });
     
-    // Make navbar transparent after scrolling down
-    function updateNavbarOnScroll() {
+    // Navbar appearance:
+    // - Slight transparent when hero is visible
+    // - Return to normal opacity after scrolling past hero
+    const heroSection = document.querySelector('.hero-section');
+    let isHeroVisible = false;
+
+    function updateNavbarAppearance() {
         if (!navbar) return;
-        if (window.scrollY > 50) {
-            navbar.classList.add('navbar-transparent');
+        const menuOpen = navMenu && navMenu.classList.contains('active');
+        if (isHeroVisible && !menuOpen) {
+            navbar.classList.add('navbar-over-hero');
         } else {
-            navbar.classList.remove('navbar-transparent');
+            navbar.classList.remove('navbar-over-hero');
         }
     }
 
-    window.addEventListener('scroll', updateNavbarOnScroll);
-    updateNavbarOnScroll();
+    if (heroSection && 'IntersectionObserver' in window) {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                isHeroVisible = entries[0].isIntersecting;
+                updateNavbarAppearance();
+            },
+            { threshold: 0.15 }
+        );
+        observer.observe(heroSection);
+    } else if (heroSection) {
+        const fallbackHandler = function() {
+            const rect = heroSection.getBoundingClientRect();
+            isHeroVisible = rect.bottom > 80 && rect.top < window.innerHeight;
+            updateNavbarAppearance();
+        };
+        window.addEventListener('scroll', fallbackHandler);
+        fallbackHandler();
+    } else {
+        // Non-home pages don't have hero section; keep normal navbar opacity.
+        isHeroVisible = false;
+        updateNavbarAppearance();
+    }
     
     // Smooth scrolling for navigation links
     document.querySelectorAll('.nav-menu a').forEach(anchor => {

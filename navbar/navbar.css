@@ -9,9 +9,9 @@
     transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
 }
 
-.navbar.navbar-transparent {
-    background-color: rgba(0, 0, 0, 0.28);
-    backdrop-filter: blur(6px);
+.navbar.navbar-over-hero {
+    background-color: transparent;
+    backdrop-filter: none;
 }
 
 .nav-container {
