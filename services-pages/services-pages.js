@@ -799,7 +799,16 @@ document.addEventListener('DOMContentLoaded', function() {
     const servicesGrid = document.getElementById('servicesGrid');
     
     if (servicesGrid) {
-        servicesData.forEach((service, index) => {
+        // Show only services that have complete detail-page content.
+        const detailedServices = servicesData.filter((service) =>
+            service.id &&
+            service.fullDescription &&
+            Array.isArray(service.features) && service.features.length > 0 &&
+            Array.isArray(service.benefits) && service.benefits.length > 0 &&
+            Array.isArray(service.faqs) && service.faqs.length > 0
+        );
+
+        detailedServices.forEach((service, index) => {
             const serviceCard = document.createElement('div');
             serviceCard.className = 'service-card-main fade-in';
             serviceCard.style.animationDelay = `${index * 0.1}s`;

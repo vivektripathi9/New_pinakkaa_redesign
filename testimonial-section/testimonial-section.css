@@ -45,7 +45,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin-bottom: 80px; /* Large breathing space */
+    margin-bottom: 112px;
 }
 
 /* Main Heading: text-4xl md:text-5xl font-semibold center aligned */
@@ -124,7 +124,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 32px; /* Space between image and text */
+    gap: 18px;
     position: relative;
     z-index: 1;
     width: 100%;
