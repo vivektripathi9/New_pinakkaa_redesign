@@ -1,44 +1,59 @@
-/* CTA Section - Premium Dark Agency Style */
-
-/* Section Layout: Full-width with specified dimensions */
+/* CTA Section */
 .cta-section {
-    width: 100%;
-    min-height: 740px;
-    background-image: url('bcb4ee9d94cce22cfdf60b8d73e7dc963a4c1cfa.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: #0a0018; /* Fallback dark color */
     position: relative;
+    width: 100%;
+    padding: 64px 20px;
+    /* Base color + layered gradients + image background */
+    background-color: #0d0014;
+    /* background-image set per section below */
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: 10% -10%, 110% 10%, center;
+    background-size: auto, auto, cover;
+    border-radius: 20px;
+    background-clip: padding-box;
     overflow: hidden;
+}
+
+/* CTA: gradients only (no background image) */
+.cta-section {
+    background-image:
+        radial-gradient(1200px 600px at 10% -10%, rgba(167, 139, 250, 0.15), transparent 60%),
+        radial-gradient(900px 500px at 110% 10%, rgba(244, 114, 182, 0.12), transparent 60%),
+        url("bcb4ee9d94cce22cfdf60b8d73e7dc963a4c1cfa.png");
+    background-size: auto, auto, cover;
+    background-position: 10% -10%, 110% 10%, center;
+    min-height: 740px;
     padding: 80px 0;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-/* Content Container */
+
+
 .cta-container {
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 24px;
-    position: relative;
-    z-index: 1;
-    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-/* CTA Content: Centered vertical layout */
 .cta-content {
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
     gap: 32px;
-    max-width: 800px;
     margin: 0 auto;
 }
 
-/* Icon Container */
 .cta-icon {
     width: 80px;
     height: 80px;
@@ -56,15 +71,9 @@
     display: block;
 }
 
-/* CTA Heading: Large bold text with purple highlight */
 .cta-heading {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    font-size: 48px;
-    font-weight: 700;
-    letter-spacing: -0.02em;
-    text-align: center;
-    margin: 0;
-    line-height: 1.2;
+    margin-bottom: 10px;
+    line-height: 1.15;
 }
 
 .cta-heading .text-white {
@@ -72,27 +81,26 @@
 }
 
 .cta-heading .text-purple {
-    background: linear-gradient(to right, #a78bfa, #f472b6);
+    background: linear-gradient(135deg, #a78bfa, #f472b6);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    color: transparent;
 }
 
-/* CTA Subtitle */
 .cta-subtitle {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    font-size: 18px;
-    font-weight: 400;
-    color: #d1d5db; /* text-gray-300 */
-    line-height: 1.6;
-    margin: 0;
+    margin: 0 auto 22px;
+    max-width: 580px;
+    color: rgba(255, 255, 255, 0.85);
+    font-family: "ABeeZee", system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
     text-align: center;
-    max-width: 100%;
-    white-space: normal;
 }
 
-/* CTA Form: Horizontal layout for input and button */
+/* Form row */
 .cta-form {
     display: flex;
     flex-direction: row;
@@ -102,135 +110,177 @@
     margin-top: 8px;
 }
 
-/* Email Input Field */
 .email-input {
     flex: 1;
-    padding: 16px 20px;
-    background-color: rgba(0, 0, 0, 0.3);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 14px 20px;
+    background-color: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: 12px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif;
     font-size: 16px;
     color: #ffffff;
     outline: none;
-    transition: all 0.3s ease;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+    min-height: 48px; /* match button height */
 }
 
 .email-input::placeholder {
-    color: #9ca3af; /* text-gray-400 */
+    color: rgba(255, 255, 255, 0.55);
 }
 
 .email-input:focus {
-    border-color: rgba(168, 85, 247, 0.5);
-    box-shadow: 0 0 0 3px rgba(168, 85, 247, 0.1);
-    background-color: rgba(0, 0, 0, 0.4);
+    border-color: rgba(167, 139, 250, 0.65);
+    background-color: rgba(255, 255, 255, 0.09);
+    box-shadow: 0 0 0 4px rgba(167, 139, 250, 0.18);
 }
 
 /* Send Button */
 .send-button {
-    padding: 16px 32px;
-    background: linear-gradient(to right, #a78bfa, #f472b6);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 14px 28px;
+    min-height: 48px; /* proper height */
+
+    background: linear-gradient(135deg, #a78bfa, #f472b6);
     border: none;
     border-radius: 12px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+
+    font-family: "Montserrat", sans-serif;
     font-size: 16px;
     font-weight: 600;
     color: #ffffff;
+
     cursor: pointer;
-    transition: all 0.3s ease;
     white-space: nowrap;
-    box-shadow: 0 4px 20px rgba(168, 85, 247, 0.3);
+
+    transition: transform 0.2s ease;
+    box-shadow: none;
 }
 
 .send-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 30px rgba(168, 85, 247, 0.4);
+    transform: translateY(-1px);
+    box-shadow: none;
 }
 
 .send-button:active {
     transform: translateY(0);
+    box-shadow: none;
 }
 
-/* Responsive Design */
-
-/* Tablet */
-@media (min-width: 768px) {
-    .cta-heading {
-        font-size: 56px;
-    }
-    
-    .cta-subtitle {
-        font-size: 20px;
-    }
-    
-    .cta-icon {
-        width: 100px;
-        height: 100px;
-    }
+.send-button:focus-visible {
+    outline: none;
+    box-shadow: none;
 }
 
-/* Desktop */
-@media (min-width: 1024px) {
-    .cta-heading {
-        font-size: 64px;
-    }
-    
-    .cta-content {
-        gap: 40px;
-    }
+/* Decorative subtle grid/orbs (non-interactive) */
+.cta-section::before {
+    content: "";
+    position: absolute;
+    inset: -20% -10% auto -10%;
+    height: 220px;
+    background: radial-gradient(closest-side, rgba(244, 114, 182, 0.16), transparent 70%);
+    pointer-events: none;
+    filter: blur(8px);
 }
 
-/* Mobile */
-@media (max-width: 767px) {
+.cta-section::after {
+    content: "";
+    position: absolute;
+    inset: auto -10% -20% -10%;
+    height: 200px;
+    background: radial-gradient(closest-side, rgba(167, 139, 250, 0.14), transparent 70%);
+    pointer-events: none;
+    filter: blur(8px);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
     .cta-section {
-        min-height: auto;
-        padding: 60px 0;
+        padding: 56px 16px;
     }
-    
-    .cta-heading {
-        font-size: 36px;
-    }
-    
-    .cta-subtitle {
-        font-size: 16px;
-        white-space: normal;
-    }
-    
-    .cta-icon {
-        width: 70px;
-        height: 70px;
-    }
-    
     .cta-form {
-        flex-direction: column;
         max-width: 100%;
     }
-    
+}
+
+@media (max-width: 560px) {
+    .cta-section {
+        padding: 44px 14px;
+    }
+    .icon-img {
+        width: 48px;
+        height: 48px;
+    }
+    .cta-form {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
     .send-button {
         width: 100%;
     }
 }
 
-@media (max-width: 480px) {
-    .cta-section {
-        padding: 40px 0;
+/* Desktop precise sizing for CTA section (not CTARE) */
+@media (min-width: 1024px) {
+    /* Heading target height ~64px via font-size/line-height */
+    .cta-section .cta-heading {
+        font-size: 64px;
+        line-height: 64px;
+        max-width: 800px; /* approx 794.68 */
+        margin: 0 auto;
+        white-space: nowrap; /* keep heading in one row */
     }
-    
-    .cta-heading {
-        font-size: 28px;
+
+    /* Subtitle target height ~28px */
+    .cta-section .cta-subtitle {
+        font-family: "ABeeZee", system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        text-align: center;
+        vertical-align: middle;
+        display: inline-block;
+        max-width: 670px;
+        margin: 0 auto;
+        white-space: nowrap; /* keep subtitle in one row */
     }
-    
-    .cta-subtitle {
-        font-size: 14px;
-        white-space: normal;
+
+    /* Widen the form row to accommodate wider input + smaller button */
+    .cta-section .cta-form {
+        max-width: 600px;
     }
-    
-    .cta-icon {
-        width: 60px;
-        height: 60px;
+
+    /* Email input: 354x48, pill radius */
+    .cta-section .email-input {
+        width: 420px;
+        min-height: 48px;
+        height: 48px;
+        border-radius: 999px;
+        padding: 0 20px;
     }
-    
-    .cta-content {
-        gap: 24px;
+
+    /* Button: 193.2936x40, pill radius */
+    .cta-section .send-button {
+        width: 150px;
+        min-height: 40px;
+        height: 40px;
+        border-radius: 999px;
+        padding: 0;
     }
 }
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .send-button {
+        transition: none;
+    }
+    .email-input {
+        transition: none;
+    }
+}
+

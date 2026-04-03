@@ -34,6 +34,42 @@
     letter-spacing: -0.01em;
 }
 
+.cards2-heading span {
+    display: inline-block;
+}
+
+/* Keep all letters stable; rotate only "o" in Power */
+.cards2-heading .rotating-o {
+    display: inline-block;
+    position: relative;
+    color: #c4b5fd;
+    -webkit-text-fill-color: #c4b5fd;
+    background: none;
+    transform-origin: 50% 55%;
+    animation: cards2-rotate-o 2.4s linear infinite;
+}
+
+/* Small marker to make the rotation visibly noticeable */
+.cards2-heading .rotating-o::after {
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #f472b6;
+    top: 2px;
+    right: -1px;
+}
+
+@keyframes cards2-rotate-o {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 .cards2-heading .text-white {
     color: #ffffff;
 }

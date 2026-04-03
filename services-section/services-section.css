@@ -38,6 +38,33 @@
     justify-content: center;
 }
 
+.services-explore-more {
+    margin-top: 32px;
+    display: flex;
+    justify-content: center;
+}
+
+.services-explore-button {
+    display: inline-block;
+    padding: 14px 28px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #9d4edd, #c77dff);
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.2s ease;
+    box-shadow: none;
+}
+
+.services-explore-button:hover {
+    transform: translateY(-2px);
+    box-shadow: none;
+}
+
+.services-explore-button:active {
+    transform: translateY(0);
+}
+
 .service-card-link {
     text-decoration: none;
     color: inherit;

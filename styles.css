@@ -1,17 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+:root {
+    --font-heading: 'Montserrat', sans-serif;
+    --font-sub: 'Montserrat', sans-serif;
+    --font-description: 'Montserrat', sans-serif;
+}
+
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-family: var(--font-description);
+    font-weight: 400;
     background-color: #000;
     overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6,
+[class*="heading"],
+[class*="title"] {
+    font-family: var(--font-heading) !important;
+    font-weight: 700 !important;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    margin: 0 0 0.5em 0;
+}
+
+[class*="subtitle"],
+[class*="sub-heading"],
+[class*="kicker"] {
+    font-family: var(--font-sub) !important;
+    font-weight: 700 !important;
+    line-height: 1.5;
+    margin: 0 0 0.75em 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+p,
+li,
+blockquote,
+label,
+input,
+textarea,
+.description,
+[class*="description"] {
+    font-family: var(--font-description) !important;
+    font-weight: 400 !important;
+    line-height: 1.7;
+    margin: 0 0 1em 0;
+}
+
+/* New global reusable typography classes (with !important to normalize sizes) */
+.sub-title {
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    letter-spacing: 2px !important;
+    text-transform: uppercase !important;
+}
+
+.section-title {
+    font-size: 30px !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+}
+
+.section-title-big {
+    font-size: 45px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 2px !important;
+}
+
+.section-para {
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    line-height: 1.6 !important;
+    color: #555 !important;
 }
 
 img,
 video {
     max-width: 100%;
     height: auto;
+}
+
+img {
+    display: block;
+}
+
+/* Speed up first paint by skipping heavy offscreen section rendering. */
+section {
+    content-visibility: auto;
+    contain-intrinsic-size: 900px;
 }

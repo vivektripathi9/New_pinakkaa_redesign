@@ -3,6 +3,19 @@
 // - Respect reduced-motion / data-saver where possible
 
 (function () {
+  // Lightweight image optimization pass:
+  // - lazy-load offscreen images
+  // - async decode to reduce main-thread jank
+  const images = Array.from(document.querySelectorAll('img'));
+  for (const img of images) {
+    if (!img.hasAttribute('decoding')) img.decoding = 'async';
+    if (!img.hasAttribute('loading')) {
+      const rect = img.getBoundingClientRect();
+      const nearViewport = rect.top < window.innerHeight * 1.2;
+      img.loading = nearViewport ? 'eager' : 'lazy';
+    }
+  }
+
   const prefersReducedMotion =
     window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 

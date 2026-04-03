@@ -79,7 +79,7 @@ const servicesData = [
             },
             {
                 question: 'How much does a website cost?',
-                answer: 'Website costs vary based on complexity, features, and requirements. Simple websites start around $2,000-$5,000, while custom e-commerce sites can range from $10,000-$50,000+. We provide detailed quotes after understanding your specific needs.'
+                answer: 'Website costs vary based on complexity, features, and requirements. Simple websites start around INR 1,50,000 - INR 4,00,000, while custom e-commerce sites can range from INR 8,00,000 - INR 40,00,000+. We provide detailed quotes after understanding your specific needs.'
             }
         ]
     },
@@ -336,7 +336,7 @@ const servicesData = [
         id: 'search-engine-marketing',
         title: 'Search Engine Marketing',
         shortDescription: 'Maximize your reach and conversions through highly targeted, performance-driven paid campaigns on Google and other major search engines.',
-        image: 'services-section/five.png',
+        image: 'components/ServicesAll_Image/Search Engine Marketing.jpg',
         video: 'components/dynamic_section/0_Purple_Abstract_3840x2160.mp4',
         bannerSlogan: 'Target. Convert. Scale Your Growth.',
         fullDescription: 'Maximize your reach and conversions through highly targeted, performance-driven paid campaigns on Google and other major search engines. Our SEM experts create and manage campaigns that deliver maximum ROI through strategic bidding, ad optimization, and continuous performance monitoring.',
@@ -364,6 +364,14 @@ const servicesData = [
             {
                 title: 'Conversion Tracking and Analytics',
                 description: 'We set up comprehensive conversion tracking to measure campaign performance accurately. Our analytics include cost per acquisition (CPA), return on ad spend (ROAS), conversion rates, and revenue attribution to demonstrate clear ROI.'
+            },
+            {
+                title: 'Audience & Geo Expansion',
+                description: 'Scale profitably by expanding to new audiences, devices, and geographies backed by incremental lift testing rather than guesswork.'
+            },
+            {
+                title: 'Budget Pacing & Forecasts',
+                description: 'Daily budget pacing, seasonal adjustments, and forecasts ensure spend efficiency while hitting monthly and quarterly targets.'
             }
         ],
         benefits: [
@@ -386,6 +394,14 @@ const servicesData = [
             {
                 title: 'Scalable Campaigns',
                 description: 'SEM campaigns are highly scalable. Once you find winning ad combinations, you can increase budget to scale successful campaigns and grow your business quickly while maintaining profitability.'
+            },
+            {
+                title: 'Actionable Insights',
+                description: 'Keyword and ad-level data reveals what customers search and convert on—fueling messaging, SEO, and product decisions.'
+            },
+            {
+                title: 'Competitive Edge',
+                description: 'Auction insights and share-of-voice reveal opportunities to outmaneuver competitors with smarter bids and placements.'
             }
         ],
         faqs: [
@@ -412,6 +428,14 @@ const servicesData = [
             {
                 question: 'What happens if I stop running SEM campaigns?',
                 answer: 'Unlike SEO, SEM traffic stops immediately when you stop paying. However, the data and insights gained from SEM campaigns are valuable for informing other marketing strategies. Many businesses use SEM to test markets and keywords before investing in long-term SEO.'
+            },
+            {
+                question: 'Do you manage Shopping & Performance Max?',
+                answer: 'Yes. We build robust product feeds, map attributes, and optimize PMax asset groups for revenue and new customer acquisition.'
+            },
+            {
+                question: 'Can you connect CRM & offline conversions?',
+                answer: 'We integrate CRM and offline conversion imports (OCI) so the ad platforms optimize for down‑funnel revenue, not just form fills.'
             }
         ]
     },
@@ -662,6 +686,193 @@ const servicesData = [
                 answer: 'We optimize for mobile through responsive design, fast load times, mobile-friendly navigation, thumb-friendly buttons, simplified checkout, mobile payment options (Apple Pay, Google Pay), and mobile-specific features. We test extensively on mobile devices to ensure optimal mobile shopping experiences.'
             }
         ]
+    },
+    {
+        id: 'display-advertising',
+        title: 'Display Advertising',
+        shortDescription: 'Design and execute impactful display ad campaigns to attract, engage, and convert potential customers.',
+        image: 'components/ServicesAll_Image/Display Advertising.jpg',
+        bannerSlogan: 'Be Seen. Be Remembered.',
+        fullDescription: 'We plan and run display advertising across Google Display Network and premium placements with creative that captures attention and converts.',
+        features: [
+            { title: 'Creative Production', description: 'High-impact static and rich-media display creatives sized for all placements.' },
+            { title: 'Smart Targeting', description: 'Contextual, interest, in-market, and remarketing audiences to reach the right people.' },
+            { title: 'Performance Optimization', description: 'Ongoing creative tests and placement optimization to maximize ROAS.' },
+            { title: 'Brand Safety Controls', description: 'Blocklists, allowlists, and third‑party verification to protect brand integrity.' },
+            { title: 'Viewability & Frequency Capping', description: 'Improve effective impressions while avoiding ad fatigue with smart caps.' }
+        ],
+        benefits: [
+            { title: 'Greater Reach', description: 'Extend your brand to millions of impressions on relevant sites and apps.' },
+            { title: 'Lower CPA via Retargeting', description: 'Convert previously engaged users efficiently with tailored creatives.' },
+            { title: 'Brand Recall Lift', description: 'Consistent visuals build awareness and recognition across the web.' },
+            { title: 'Creative Learnings', description: 'A/B tests reveal what messages and visuals resonate for future campaigns.' }
+        ],
+        faqs: [
+            { question: 'Which networks do you use?', answer: 'Primarily Google Display Network plus curated direct buys and programmatic partners as needed.' },
+            { question: 'How do you measure success?', answer: 'We track impressions, reach, CTR, view-throughs, conversions, and ROAS with clear reporting.' },
+            { question: 'Do you support HTML5 rich media?', answer: 'Yes, we develop HTML5/Rich Media assets and ensure cross‑platform compatibility.' }
+        ]
+    },
+    {
+        id: 'pr-marketing-services',
+        title: 'PR & Marketing Services',
+        shortDescription: 'Build credibility and visibility through targeted PR campaigns and media outreach.',
+        image: 'components/ServicesAll_Image/PR & Marketing Services.jpg',
+        bannerSlogan: 'Earned Attention. Lasting Trust.',
+        fullDescription: 'Our PR team crafts narratives, pitches media, and manages coverage to elevate your brand story.',
+        features: [
+            { title: 'Press Releases & Media Kits', description: 'Professionally written releases and assets for journalists.' },
+            { title: 'Media Outreach', description: 'Targeted outreach to relevant publications, podcasts, and influencers.' },
+            { title: 'Thought Leadership', description: 'Bylines, op‑eds, expert commentary, and awards programs to build authority.' },
+            { title: 'Measurement & Clippings', description: 'Track pickups, share of voice, sentiment, and traffic from earned media.' }
+        ],
+        benefits: [
+            { title: 'Increased Authority', description: 'Earned media lifts credibility and organic discoverability.' },
+            { title: 'Broader Awareness', description: 'Reach new audiences through respected third-party channels.' },
+            { title: 'Long‑Term SEO Value', description: 'Quality editorial backlinks strengthen domain authority and rankings.' }
+        ],
+        faqs: [
+            { question: 'How fast can we get coverage?', answer: 'Lead time varies by story and publication; most campaigns see traction within 4–8 weeks.' },
+            { question: 'Do you handle crisis communications?', answer: 'Yes. We prepare holding statements, Q&As, and coordinate with legal as needed.' }
+        ]
+    },
+    {
+        id: 'software-development',
+        title: 'Software Development',
+        shortDescription: 'Delivering scalable, customized applications that support your digital growth.',
+        image: 'components/ServicesAll_Image/Software Development.jpg',
+        bannerSlogan: 'Build Fast. Scale Smart.',
+        fullDescription: 'End-to-end product development from MVP to enterprise-grade systems using modern stacks.',
+        features: [
+            { title: 'Custom Web Apps', description: 'Robust backends and polished frontends with clean architectures.' },
+            { title: 'Quality Engineering', description: 'Automated tests, CI/CD, and code reviews for reliability.' },
+            { title: 'Cloud & DevOps', description: 'Containerization, IaC, observability, and autoscaling on major clouds.' },
+            { title: 'Product Discovery', description: 'Workshops, user stories, and roadmaps aligned to measurable outcomes.' }
+        ],
+        benefits: [
+            { title: 'Faster Time-to-Market', description: 'Iterative delivery gets working software in users’ hands sooner.' },
+            { title: 'Lower Long‑Term Cost', description: 'Solid foundations reduce maintenance and rework.' },
+            { title: 'Future‑Proof Architecture', description: 'Modular codebases that evolve with your roadmap.' }
+        ],
+        faqs: [
+            { question: 'What stacks do you use?', answer: 'We tailor stacks per project; common choices include Node/React, Python, and cloud-native services.' },
+            { question: 'Can you join existing teams?', answer: 'Yes—our engineers can augment your team or run a dedicated squad.' }
+        ]
+    },
+    {
+        id: 'api-integration',
+        title: 'API Integration',
+        shortDescription: 'Enable seamless communication between systems with robust API integrations.',
+        image: 'components/ServicesAll_Image/API Integration.jpg',
+        bannerSlogan: 'Connect Everything. Work Seamlessly.',
+        fullDescription: 'We design, secure, and integrate APIs to streamline data flows and automate operations.',
+        features: [
+            { title: 'Third‑Party Integrations', description: 'CRM, ERP, payments, analytics, and marketing platforms.' },
+            { title: 'Webhook & Event Design', description: 'Reliable event-driven data exchange between services.' },
+            { title: 'Auth & Rate Limits', description: 'OAuth2, API keys, throttling, retries, and exponential backoff patterns.' },
+            { title: 'Testing & Monitoring', description: 'Contract tests, sandbox harnesses, logging, and alerting for stability.' }
+        ],
+        benefits: [
+            { title: 'Operational Efficiency', description: 'Reduce manual effort and data inconsistencies.' },
+            { title: 'Better Insights', description: 'Unified data improves reporting and decision-making.' },
+            { title: 'Reduced Integration Risk', description: 'Robust error handling prevents silent data loss.' }
+        ],
+        faqs: [
+            { question: 'Do you provide documentation?', answer: 'Yes, we deliver endpoint specs and implementation guides for smooth handoffs.' },
+            { question: 'Can you build custom APIs?', answer: 'Absolutely—we design secure REST/GraphQL APIs tailored to your product.' }
+        ]
+    },
+    {
+        id: 'email-marketing',
+        title: 'Email Marketing',
+        shortDescription: 'Personalized email campaigns that nurture leads and increase conversions.',
+        image: 'components/ServicesAll_Image/Email Marketing.jpg',
+        bannerSlogan: 'Right Message. Right Inbox.',
+        fullDescription: 'Strategy, creative, automation, and reporting for lifecycle emails—from welcome to win-back.',
+        features: [
+            { title: 'Automation Journeys', description: 'Behavior-based flows using leading ESPs.' },
+            { title: 'List Hygiene & Segmentation', description: 'Improve deliverability and relevance with clean lists.' },
+            { title: 'Template Systems', description: 'Modular, responsive templates that speed up content production.' },
+            { title: 'Deliverability Audits', description: 'SPF/DKIM/DMARC setup, domain warm‑up, and inbox placement checks.' }
+        ],
+        benefits: [
+            { title: 'Higher LTV', description: 'Nurture relationships that drive repeat purchases.' },
+            { title: 'Predictable Revenue', description: 'Regular campaigns with clear performance tracking.' },
+            { title: 'Lower CAC', description: 'Owned channels reduce dependency on paid ads over time.' }
+        ],
+        faqs: [
+            { question: 'Which ESPs do you support?', answer: 'Klaviyo, Mailchimp, HubSpot, and others as needed.' },
+            { question: 'Can you set up advanced tracking?', answer: 'Yes—UTMs, event tracking, and revenue attribution to see channel impact.' }
+        ]
+    },
+    {
+        id: 'sms-marketing',
+        title: 'SMS Marketing',
+        shortDescription: 'Instant, high-visibility SMS campaigns for time-sensitive promotions and updates.',
+        image: 'components/ServicesAll_Image/SMS Marketing.jpg',
+        bannerSlogan: 'Instant Reach. Real Impact.',
+        fullDescription: 'Compliance-first SMS programs with smart segmentation and clear opt-in/opt-out flows.',
+        features: [
+            { title: 'Campaign & Compliance', description: 'TCPA/DPDP-aware setup, consent capture, and templates.' },
+            { title: 'Automation & Triggers', description: 'Send at critical moments—abandoned cart, reorder, or alerts.' },
+            { title: 'Short Links & Tracking', description: 'Branded short links and click tracking for performance visibility.' },
+            { title: 'Two‑Way Messaging', description: 'Keyword responses and quick replies to capture intent instantly.' }
+        ],
+        benefits: [
+            { title: 'Exceptional Open Rates', description: 'Reach customers where they are with near-instant reads.' },
+            { title: 'Higher Conversion Windows', description: 'Timely nudges that move customers to act.' },
+            { title: 'Omni‑Channel Support', description: 'Orchestrate SMS with email/WhatsApp for cohesive journeys.' }
+        ],
+        faqs: [
+            { question: 'Can we integrate with our CRM?', answer: 'Yes, we connect SMS platforms with your CRM and analytics for attribution.' },
+            { question: 'Do you handle opt‑in/opt‑out flows?', answer: 'We implement compliant consent capture and intuitive STOP/HELP flows.' }
+        ]
+    },
+    {
+        id: 'whatsapp-marketing',
+        title: 'WhatsApp Marketing',
+        shortDescription: 'Engage customers via interactive, personalized WhatsApp conversations.',
+        image: 'components/ServicesAll_Image/WhatsApp Marketing.jpg',
+        bannerSlogan: 'Converse. Convert. Care.',
+        fullDescription: 'Broadcasts, catalogs, and conversational journeys using official WhatsApp Business APIs.',
+        features: [
+            { title: 'Template & Broadcast Setup', description: 'Approved templates, opt-ins, and audience lists.' },
+            { title: 'Conversational Flows', description: 'Guided experiences for FAQs, booking, and support.' },
+            { title: 'Quick Replies & Buttons', description: 'Frictionless UX to increase response and completion rates.' },
+            { title: 'Broadcast + 1:1 Blends', description: 'Combine announcements with live agent handoff when needed.' }
+        ],
+        benefits: [
+            { title: 'Higher Engagement', description: 'Two-way messaging builds trust and resolution speed.' },
+            { title: 'Reduced Support Load', description: 'Automated flows handle common queries 24/7.' },
+            { title: 'Richer Commerce', description: 'Product catalogs and order updates inside the chat experience.' }
+        ],
+        faqs: [
+            { question: 'Do you support catalogs?', answer: 'Yes, we configure product catalogs and commerce experiences in WhatsApp.' },
+            { question: 'Is it official API?', answer: 'We use verified WhatsApp Business APIs and approved message templates to ensure compliance.' }
+        ]
+    },
+    {
+        id: 'shopify-website-development',
+        title: 'Shopify Website Development',
+        shortDescription: 'Custom Shopify stores built for speed, conversion, and scalable growth.',
+        image: 'components/ServicesAll_Image/Shopify Website Development.jpg',
+        bannerSlogan: 'Launch Fast. Sell More.',
+        fullDescription: 'Theme customizations, app integrations, and performance tuning to get the most from Shopify.',
+        features: [
+            { title: 'Theme Customization', description: 'Tailored storefronts aligned to your brand and UX goals.' },
+            { title: 'Checkout & App Integrations', description: 'Payments, shipping, reviews, subscriptions, and analytics.' },
+            { title: 'Headless & Hydrogen', description: 'Headless Shopify or Hydrogen for advanced performance and flexibility.' },
+            { title: 'Speed & Core Web Vitals', description: 'Theme audits, image optimization, and script control for fast pages.' }
+        ],
+        benefits: [
+            { title: 'Faster Time-to-Revenue', description: 'Leverage Shopify’s ecosystem to go live quickly.' },
+            { title: 'Lower Maintenance', description: 'Hosted platform minimizes ops overhead and updates.' },
+            { title: 'Higher Conversion Rates', description: 'Optimized product pages, cart, and checkout that convert more traffic.' }
+        ],
+        faqs: [
+            { question: 'Can you migrate to Shopify?', answer: 'Yes, we handle data migration, redirects, and SEO continuity from other platforms.' },
+            { question: 'Do you support Shopify Plus?', answer: 'Yes, we implement Plus features like Scripts, advanced checkout, and automation.' }
+        ]
     }
 ];
 
@@ -750,13 +961,10 @@ const addRippleEffect = () => {
     });
 };
 
-// Add floating animation to service images
+// Add floating animation to service images (disabled as requested)
 const addFloatingAnimation = () => {
-    const images = document.querySelectorAll('.service-image-main img');
-    images.forEach((img, index) => {
-        img.style.animationDelay = `${index * 0.2}s`;
-        img.parentElement.classList.add('floating');
-    });
+    // no-op to keep images stable (no up-down float)
+    return;
 };
 
 // Progressive image loading with fade-in
@@ -842,14 +1050,58 @@ document.addEventListener('DOMContentLoaded', function() {
     addCursorEffect();
     addScrollProgress();
     
-    // Add scroll animations to hero content
-    const heroContent = document.querySelector('.services-hero-content');
-    if (heroContent) {
-        heroContent.classList.add('fade-in');
-        setTimeout(() => {
-            heroContent.classList.add('visible');
-        }, 100);
+    // Pinakkaa Advantage population (for services.html; service-detail.js will override on detail pages)
+    const advantageSection = document.getElementById('pinakkaaAdvantage');
+    if (advantageSection && Array.isArray(servicesData) && servicesData.length) {
+        const advantageTitleEl = document.getElementById('pinakkaaAdvantageTitle');
+        const advantageSubtitleEl = document.getElementById('pinakkaaAdvantageSubtitle');
+        const advantageDesc1 = document.getElementById('pinakkaaAdvantageDesc1');
+        const advantageDesc2 = document.getElementById('pinakkaaAdvantageDesc2');
+        const advantageDesc3 = document.getElementById('pinakkaaAdvantageDesc3');
+        const advantageDesc4 = document.getElementById('pinakkaaAdvantageDesc4');
+
+        const truncate = (text, max = 150) => {
+            const value = String(text || '').trim();
+            if (!value) return '';
+            return value.length > max ? value.slice(0, max - 3) + '...' : value;
+        };
+
+        const defaultService =
+            servicesData.find((s) => Array.isArray(s.benefits) && s.benefits.length >= 4) ||
+            servicesData.find((s) => Array.isArray(s.benefits) && s.benefits.length > 0) ||
+            servicesData[0];
+
+        const benefitPool = Array.isArray(defaultService?.benefits) ? defaultService.benefits : [];
+        const featurePool = Array.isArray(defaultService?.features) ? defaultService.features : [];
+        const getDesc = (idx) => {
+            const b = benefitPool[idx];
+            if (b && typeof b === 'object' && b.description) return b.description;
+            const f = featurePool[idx];
+            if (f && typeof f === 'object' && f.description) return f.description;
+            return '';
+        };
+
+        if (advantageTitleEl) {
+            advantageTitleEl.textContent = 'The Pinakkaa Advantage Across Services';
+        }
+        if (advantageSubtitleEl) {
+            advantageSubtitleEl.textContent = 'Across every service, you get one thing in common: a growth partner, not just a vendor.';
+        }
+
+        const shortLines = [
+            'Clear positioning for your brand.',
+            'Channels managed as one system.',
+            'Campaigns linked directly to revenue.',
+            'Reporting that tells you what to do next.'
+        ];
+
+        if (advantageDesc1) advantageDesc1.textContent = truncate(shortLines[0]);
+        if (advantageDesc2) advantageDesc2.textContent = truncate(shortLines[1]);
+        if (advantageDesc3) advantageDesc3.textContent = truncate(shortLines[2]);
+        if (advantageDesc4) advantageDesc4.textContent = truncate(shortLines[3]);
     }
+
+    // Hero section kept static: no fade-in classes applied
     
     // Add scroll animations to CTA section
     const ctaSection = document.querySelector('.services-cta-container');

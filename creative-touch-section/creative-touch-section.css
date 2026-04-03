@@ -44,10 +44,10 @@
 
 .creative-touch-section .main-heading {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    font-size: 56px;
+    font-size: 48px;
     font-weight: 600;
     text-align: center;
-    margin: 0 0 72px 0;
+    margin: 0 0 56px 0;
     letter-spacing: -0.5px;
     line-height: 1.2;
 }
@@ -66,7 +66,7 @@
 .content-columns {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 56px;
+    gap: 44px;
     width: 100%;
     max-width: 1200px;
     margin-top: 32px;
@@ -86,7 +86,7 @@
 
 .percentage {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    font-size: 72px;
+    font-size: 60px;
     font-weight: 700;
     color: #ffffff;
     margin: 0 0 20px 0;
@@ -95,7 +95,7 @@
 
 .column-title {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
     color: #ffffff;
     margin: 0 0 16px 0;
@@ -104,7 +104,7 @@
 
 .column-description {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 400;
     color: rgba(224, 224, 224, 0.7);
     line-height: 1.6;
