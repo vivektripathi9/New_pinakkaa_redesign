@@ -3,12 +3,12 @@
 .cards2-section {
     width: 100%;
     background-color: #070016; /* Match current theme */
-    height: 180px; /* Increased height desktop */
+    min-height: 180px; /* allow content to breathe */
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0;
-    padding: 36px 0 0;
+    padding: 44px 0 16px;
     overflow: hidden;
 }
 
@@ -113,8 +113,8 @@
 
 @media (max-width: 767px) {
     .cards2-section {
-        height: 140px; /* Increased height mobile */
-        padding-top: 24px;
+        min-height: 220px; /* avoid clipping on wrapped heading */
+        padding: 36px 0 20px;
     }
     
     .cards2-heading {
