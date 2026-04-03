@@ -346,12 +346,12 @@ document.addEventListener('DOMContentLoaded', function() {
             subtitle: 'Hands-on campaign management built for profitable growth, not just higher spend.',
             items: [
                 {
-                    icon: 'services-pages/New_icons/growth_12951171.svg',
+                    icon: 'services-pages/New_icons/achievement_7871901.svg',
                     title: 'Performance DNA',
                     desc: 'Bids, audiences, and creatives tuned from live data, not set‑and‑forget rules.'
                 },
                 {
-                    icon: 'services-pages/New_icons/objective_12209885.svg',
+                    icon: 'services-pages/New_icons/view_14014506.svg',
                     title: 'Goal-Linked KPIs',
                     desc: 'Every campaign wired to leads, pipeline, or revenue instead of surface‑level metrics.'
                 },

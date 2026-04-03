@@ -624,7 +624,7 @@
 }
 
 .about-process-section {
-    padding: 28px 0 80px;
+    padding: 0 0 60px;
 }
 
 .about-process-container {
@@ -634,7 +634,7 @@
 }
 
 .about-process-kicker {
-    margin: 0 0 14px 0;
+    margin: 0;
     text-transform: uppercase;
     letter-spacing: 0.16em;
     color: #d8c7ee;
@@ -643,7 +643,7 @@
 }
 
 .about-process-title {
-    margin: 16px auto 18px;
+    margin: 10px auto 14px;
     max-width: 100%;
     font-size: clamp(28px, 3.2vw, 48px);
     line-height: 1.08;
@@ -652,7 +652,7 @@
 }
 
 .about-process-subtitle {
-    margin: 0 auto 34px auto;
+    margin: 0 auto;
     max-width: 720px;
     font-size: 16px;
     line-height: 1.6;
@@ -761,7 +761,7 @@
 }
 
 .about-process-action {
-    margin-top: 26px;
+    margin-top: 14px;
 }
 
 .about-process-button {

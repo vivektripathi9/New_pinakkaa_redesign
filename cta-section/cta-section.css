@@ -22,7 +22,7 @@
         url("bcb4ee9d94cce22cfdf60b8d73e7dc963a4c1cfa.png");
     background-size: auto, auto, cover;
     background-position: 10% -10%, 110% 10%, center;
-    min-height: 740px;
+    height: auto;
     padding: 80px 0;
     display: flex;
     align-items: center;
