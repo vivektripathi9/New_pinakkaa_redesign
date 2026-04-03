@@ -4,10 +4,14 @@
 .testimonial-section {
     width: 100%;
     background-color: #070016;
-    padding-top: 128px; /* py-32 desktop */
-    padding-bottom: 128px; /* py-32 desktop */
+    padding-top: 100px; /* py-32 desktop */
+    padding-bottom: 80px; /* adjusted bottom spacing */
     position: relative;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* center align content horizontally */
+    justify-content: center; /* center content vertically */
 }
 
 .testimonial-bg-video {
@@ -95,7 +99,6 @@
 .testimonials-wrapper {
     position: relative;
     width: 100%;
-    min-height: 400px;
 }
 
 /* Testimonial Block: Individual testimonial card */
@@ -268,7 +271,6 @@
     }
     
     .testimonials-wrapper {
-        min-height: 450px;
     }
 }
 
@@ -295,7 +297,6 @@
     }
     
     .testimonials-wrapper {
-        min-height: 380px;
     }
     
     .testimonial-content {
@@ -333,7 +334,6 @@
     }
     
     .testimonials-wrapper {
-        min-height: 350px;
     }
     
     .quote {
