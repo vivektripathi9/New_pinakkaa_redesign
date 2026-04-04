@@ -46,6 +46,13 @@
 
 .hero-logo-container {
     text-align: center;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.hero-logo-container.is-visible {
+    visibility: visible;
+    opacity: 1;
     animation: heroFadeIn 1.5s ease-out;
 }
 
