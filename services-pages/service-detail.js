@@ -808,6 +808,9 @@ function loadRelatedServices(currentService) {
                 </a>
             `).join('')}
         </div>
+        <div class="services-cta-actions" style="margin-top: 28px;">
+            <a href="services.html" class="services-cta-button">Explore more services</a>
+        </div>
     `;
     
     // Make sure it's visible

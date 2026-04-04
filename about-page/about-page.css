@@ -1441,6 +1441,8 @@
         border-left: 0;
         border-top: 1px solid rgba(255, 255, 255, 0.2);
         border-radius: 0 0 18px 18px;
+        margin-right: 0; /* remove desktop offset on mobile */
+        margin-left: 0;
     }
 
 }

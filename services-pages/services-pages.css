@@ -1135,6 +1135,13 @@ html {
     min-width: 220px;
 }
 
+.related-services-section .services-cta-button {
+    padding: 16px 36px;
+    font-size: 16px;
+    min-width: 180px;
+    border-radius: 14px;
+}
+
 .services-cta-button::before {
     content: '';
     position: absolute;
