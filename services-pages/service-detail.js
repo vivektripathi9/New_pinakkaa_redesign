@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 'Always-On Measurement'
             ],
             descriptions: [
-                'Rankings built to last, not spike—technical, on-page, and authority working together.',
+                'Rankings built to last, not spike: technical, on-page, and authority working together.',
                 'Stories written for humans first and algorithms second, so clicks stay and explore.',
                 'Journeys tuned for demo, lead, or sale with clear paths from search term to action.',
                 'Dashboards you can actually read, focused on traffic quality and revenue.'
@@ -141,7 +141,7 @@ document.addEventListener('DOMContentLoaded', function() {
             descriptions: [
                 'Ads shown only to real prospects using intent, audience lists, and geos that matter.',
                 'Copy and creatives built to win more auctions without burning your budget.',
-                'Every rupee mapped to outcomes like leads, pipeline, or revenue—not just clicks.',
+                'Every rupee mapped to outcomes like leads, pipeline, or revenue, not just clicks.',
                 'Plain‑English performance breakdowns with clear keep/kill/scale decisions.'
             ]
         },
@@ -615,7 +615,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 extra.push('Engagements are flexible. Most clients start with a 3‑month plan to validate impact, then extend based on performance and roadmap.');
             }
             if (/(team|in‑house|collaborate|work with us|handoff)/i.test(q)) {
-                extra.push('We collaborate seamlessly with in‑house teams—sharing roadmaps, tasks, and clear ownership—to avoid duplication and accelerate delivery.');
+                extra.push('We collaborate seamlessly with in‑house teams, sharing roadmaps, tasks, and clear ownership to avoid duplication and accelerate delivery.');
             }
             if (/(creative|asset|landing|page|copy|design)/i.test(q)) {
                 extra.push('We can support copy, design, and landing pages. Where you have existing assets, we iterate through structured A/B tests to find winners faster.');

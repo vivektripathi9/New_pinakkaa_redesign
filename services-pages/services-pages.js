@@ -397,7 +397,7 @@ const servicesData = [
             },
             {
                 title: 'Actionable Insights',
-                description: 'Keyword and ad-level data reveals what customers search and convert on—fueling messaging, SEO, and product decisions.'
+                description: 'Keyword and ad-level data reveals what customers search and convert on, fueling messaging, SEO, and product decisions.'
             },
             {
                 title: 'Competitive Edge',
@@ -756,7 +756,7 @@ const servicesData = [
         ],
         faqs: [
             { question: 'What stacks do you use?', answer: 'We tailor stacks per project; common choices include Node/React, Python, and cloud-native services.' },
-            { question: 'Can you join existing teams?', answer: 'Yes—our engineers can augment your team or run a dedicated squad.' }
+            { question: 'Can you join existing teams?', answer: 'Yes. Our engineers can augment your team or run a dedicated squad.' }
         ]
     },
     {
@@ -779,7 +779,7 @@ const servicesData = [
         ],
         faqs: [
             { question: 'Do you provide documentation?', answer: 'Yes, we deliver endpoint specs and implementation guides for smooth handoffs.' },
-            { question: 'Can you build custom APIs?', answer: 'Absolutely—we design secure REST/GraphQL APIs tailored to your product.' }
+            { question: 'Can you build custom APIs?', answer: 'Absolutely. We design secure REST/GraphQL APIs tailored to your product.' }
         ]
     },
     {
@@ -788,7 +788,7 @@ const servicesData = [
         shortDescription: 'Personalized email campaigns that nurture leads and increase conversions.',
         image: 'components/ServicesAll_Image/Email Marketing.jpg',
         bannerSlogan: 'Right Message. Right Inbox.',
-        fullDescription: 'Strategy, creative, automation, and reporting for lifecycle emails—from welcome to win-back.',
+        fullDescription: 'Strategy, creative, automation, and reporting for lifecycle emails, from welcome to win-back.',
         features: [
             { title: 'Automation Journeys', description: 'Behavior-based flows using leading ESPs.' },
             { title: 'List Hygiene & Segmentation', description: 'Improve deliverability and relevance with clean lists.' },
@@ -802,7 +802,7 @@ const servicesData = [
         ],
         faqs: [
             { question: 'Which ESPs do you support?', answer: 'Klaviyo, Mailchimp, HubSpot, and others as needed.' },
-            { question: 'Can you set up advanced tracking?', answer: 'Yes—UTMs, event tracking, and revenue attribution to see channel impact.' }
+            { question: 'Can you set up advanced tracking?', answer: 'Yes. UTMs, event tracking, and revenue attribution to see channel impact.' }
         ]
     },
     {
@@ -814,7 +814,7 @@ const servicesData = [
         fullDescription: 'Compliance-first SMS programs with smart segmentation and clear opt-in/opt-out flows.',
         features: [
             { title: 'Campaign & Compliance', description: 'TCPA/DPDP-aware setup, consent capture, and templates.' },
-            { title: 'Automation & Triggers', description: 'Send at critical moments—abandoned cart, reorder, or alerts.' },
+            { title: 'Automation & Triggers', description: 'Send at critical moments such as abandoned cart, reorder, or alerts.' },
             { title: 'Short Links & Tracking', description: 'Branded short links and click tracking for performance visibility.' },
             { title: 'Two‑Way Messaging', description: 'Keyword responses and quick replies to capture intent instantly.' }
         ],
