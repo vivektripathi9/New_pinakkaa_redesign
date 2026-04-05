@@ -51,6 +51,46 @@
     list-style: none;
     gap: 35px;
     align-items: center;
+    position: relative;
+}
+
+.has-dropdown {
+    position: relative;
+}
+
+.has-dropdown .dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    min-width: 260px;
+    padding: 10px;
+    background: rgba(7, 0, 22, 0.96);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(10px);
+    z-index: 1002;
+}
+
+.has-dropdown:hover .dropdown {
+    display: block;
+}
+
+.has-dropdown .dropdown a {
+    display: block;
+    padding: 10px 12px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 8px;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.has-dropdown .dropdown a:hover {
+    background: rgba(167, 139, 250, 0.12);
+    color: #c4b5fd;
+    transform: translateX(4px);
 }
 
 .nav-menu li a {
@@ -130,6 +170,26 @@
         box-shadow: -5px 0 20px rgba(0, 0, 0, 0.5);
         border-left: 1px solid rgba(255, 255, 255, 0.1);
         overflow-y: auto;
+    }
+    
+    /* On mobile, keep dropdown items inline under Services */
+    .has-dropdown .dropdown {
+        position: static;
+        display: none;
+        width: 100%;
+        padding: 6px 0 0 0;
+        background: transparent;
+        border: 0;
+        box-shadow: none;
+        backdrop-filter: none;
+    }
+    .has-dropdown:hover .dropdown {
+        display: block;
+    }
+    .has-dropdown .dropdown a {
+        padding: 12px 20px;
+        font-size: 15px;
+        border-radius: 8px;
     }
     
     .nav-menu.active {
