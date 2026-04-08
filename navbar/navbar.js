@@ -77,21 +77,38 @@ document.addEventListener('DOMContentLoaded', function() {
         updateNavbarAppearance();
     }
     
-    // Smooth scrolling for navigation links
-    document.querySelectorAll('.nav-menu a').forEach(anchor => {
+    // Smooth scrolling for in-page links without adding hash to URL
+    const inPageSectionIds = new Set([
+        'home',
+        'why-us',
+        'about',
+        'portfolio',
+        'services',
+        'testimonials'
+    ]);
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             const href = this.getAttribute('href');
-            if (href.startsWith('#')) {
-                e.preventDefault();
-                const target = document.querySelector(href);
-                if (target) {
-                    const offset = 80; // Account for fixed navbar height
-                    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
-                    window.scrollTo({
-                        top: targetPosition,
-                        behavior: 'smooth'
-                    });
-                }
+            if (!href || href === '#') return;
+
+            const targetId = href.slice(1);
+            if (!inPageSectionIds.has(targetId)) return;
+
+            const target = document.getElementById(targetId);
+            if (!target) return;
+
+            e.preventDefault();
+            const offset = 80; // Account for fixed navbar height
+            const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
+            });
+
+            // Keep URL clean by removing section hash if any.
+            if (window.location.hash) {
+                window.history.replaceState({}, '', window.location.pathname + window.location.search);
             }
         });
     });

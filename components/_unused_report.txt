@@ -1,0 +1,34 @@
+﻿TOTAL: 27
+USED: 27
+UNUSED: 0
+
+UNUSED FILES:
+
+USED FILES:
+components/142846.jpg
+components/142846.webp
+components/CREATIVE SOLUTION.svg
+components/CUSTOMIZED SOLUTIONS.svg
+components/discover.png
+components/dynamic_section/0_Circuit_Board_Technology_1920x1010.mp4
+components/dynamic_section/0_Purple_Abstract_3840x2160.mp4
+components/dynamic_section/0_Purple_Lines_1920x1080.mp4
+components/dynamic_section/46154.jpg
+components/dynamic_section/GettyImages-1151009350.mp4
+components/dynamic_section/GettyImages-1214291662.mp4
+components/dynamic_section/GettyImages-1328983286.mp4
+components/execution.png
+components/EXPERT TEAM.svg
+components/home_page_video_hero.mp4
+components/pinakkaa logo.webp
+components/ROI-DRIVEN APPROACH.svg
+components/ServicesAll_Image/API Integration.jpg
+components/ServicesAll_Image/Display Advertising.jpg
+components/ServicesAll_Image/Email Marketing.jpg
+components/ServicesAll_Image/PR & Marketing Services.jpg
+components/ServicesAll_Image/Search Engine Marketing.jpg
+components/ServicesAll_Image/Shopify Website Development.jpg
+components/ServicesAll_Image/SMS Marketing.jpg
+components/ServicesAll_Image/Software Development.jpg
+components/ServicesAll_Image/WhatsApp Marketing.jpg
+components/strategy.png

@@ -1,8 +1,126 @@
 // Service Detail Page Handler
 document.addEventListener('DOMContentLoaded', function() {
+    const serviceSeoMap = {
+        'website-designing': {
+            slug: 'website-designing-agency-in-bangalore',
+            title: 'Website Design and Development company in Bangalore | Pinakkaa',
+            description: "Pinakkaa is a trusted website design and Development agency in Bangalore delivering creative, user-friendly websites that help businesses grow online. Let's build your digital success."
+        },
+        'seo-digital-marketing': {
+            slug: 'seo-company-in-bangalore',
+            title: 'Best SEO Agency in Bangalore | SEO Company in Bangalore - Pinakkaa',
+            description: 'Pinakkaa is a Result oriented SEO company in Bangalore delivering real results. Improve SERP rankings, boost traffic, and grow your business with our expert team.'
+        },
+        'online-reputation-management': {
+            slug: 'orm-services-in-bangalore',
+            title: 'ORM Services in Bangalore | Online Reputation Management Company - Pinakkaa',
+            description: "Protect your brand with Pinakkaa's Expert ORM services in Bangalore. We remove negative results, improve ratings, build trust, and help your business stand out with a strong online reputation."
+        },
+        'social-media-optimization': {
+            slug: 'social-media-optimization-services-bangalore',
+            title: 'SMO Company in Bangalore | Social Media Optimization Agency - Pinakkaa',
+            description: 'Pinakkaa is a trusted SMO company in Bangalore helping businesses increase reach, engagement, and leads through powerful social media strategies.'
+        },
+        'search-engine-marketing': {
+            slug: 'search-engine-marketing-agency-bangalore',
+            title: 'SEM Services in Bangalore | Search Engine Marketing Agency - Pinakkaa',
+            description: 'Pinakkaa, a reliable search engine marketing company in Bangalore, offers performance-driven SEM services in Bangalore to generate leads, increase sales, and deliver strong ROI as a leading SEM agency.'
+        },
+        'social-media-marketing': {
+            slug: 'social-media-marketing-company-in-bangalore',
+            title: 'Social Media Marketing agency in Bangalore | SMM Company in Bangalore | Pinakkaa',
+            description: 'As a trusted Social Media Marketing agency in Bangalore, Pinakkaa stands out as a reliable SMM company in Bangalore delivering measurable growth through effective social media campaigns.'
+        },
+        'branding-rebranding': {
+            slug: 'branding-rebranding-agency-bangalore',
+            title: 'Branding Agency in Bangalore | Pinakkaa Brand Identity Creators',
+            description: 'Why choose Pinakkaa? We go beyond visuals to build brands that stand out. Our branding and rebranding services in Bangalore focus on strategy, identity, and growth.'
+        },
+        'display-advertising': {
+            slug: 'display-advertising-agency-bangalore',
+            title: 'Best display advertising agency in Bangalore | Pinakkaa',
+            description: 'Pinakkaa offers display advertising services in Bangalore designed to reach the right audience, improve brand visibility, and generate higher engagement and measurable returns.'
+        },
+        'ecommerce-solutions': {
+            slug: 'ecommerce-marketing-agency-bangalore',
+            title: 'E-Commerce Website Development Agency in Bangalore | Pinakkaa',
+            description: 'Pinakkaa offers e-commerce website development Company in Bangalore, building scalable, user-friendly online stores with seamless design, secure systems, and performance-focused solutions.'
+        },
+        'pr-marketing-services': {
+            slug: 'pr-and-marketing-agency-bangalore',
+            title: 'Strategic PR and Marketing Solutions in Bangalore | Pinakkaa',
+            description: 'Pinakkaa is a PR and marketing agency in Bangalore helping brands build credibility, gain media visibility, and connect with the right audience through targeted campaigns and storytelling.'
+        },
+        'software-development': {
+            slug: 'software-development-company-bangalore',
+            title: 'Software Development Company in Bangalore | Pinakkaa Tech Solutions',
+            description: 'Get in touch with Pinakkaa, a custom software development company in Bangalore delivering tailored solutions for startups, SMEs, and enterprises, including applications, cloud, and system integration.'
+        },
+        'api-integration': {
+            slug: 'api-integration-services-bangalore',
+            title: 'API Integration Services in Bangalore | Pinakkaa Seamless System Connectivity',
+            description: 'Pinakkaa provides API integration services in Bangalore enabling smooth data flow between your apps, platforms, CRM, ERP and business systems for unified operations.'
+        },
+        'email-marketing': {
+            slug: 'email-marketing-company-in-bangalore',
+            title: 'Email Marketing Services in Bangalore | Top Email marketing company Bangalore',
+            description: 'Pinakkaa Email Marketing Agency in Bangalore that offers result-driven email marketing services to achieve your goals. Hire the Best Email Marketing Company in Bangalore!'
+        },
+        'sms-marketing': {
+            slug: 'sms-marketing-company-in-bangalore',
+            title: 'SMS Marketing Company in Bangalore | Pinakkaa High-Conversion SMS Campaigns',
+            description: 'Pinakkaa, SMS Marketing agency in Bangalore creates high-impact SMS marketing campaigns for lead generation, customer retention and instant communication with measurable results.'
+        },
+        'whatsapp-marketing': {
+            slug: 'whatsapp-marketing-services-bangalore',
+            title: 'WhatsApp Marketing Agency in Bangalore | Pinakkaa Direct Customer Engagement',
+            description: 'Pinakkaa offers WhatsApp marketing services in Bangalore to boost interaction, automate communication, deliver campaigns and increase conversion through personal outreach.'
+        },
+        'shopify-website-development': {
+            slug: 'shopify-website-development-services-in-bangalore',
+            title: 'Shopify Website Development Services in Bangalore | Pinakkaa',
+            description: 'Pinakkaa offers Shopify website development services in Bangalore, creating scalable, user-friendly online stores designed to improve performance, conversions, and growth.'
+        }
+    };
+
+    const slugToServiceId = Object.fromEntries(
+        Object.entries(serviceSeoMap).map(([id, seo]) => [seo.slug, id])
+    );
+
+    const getServiceUrl = (id) => {
+        const slug = serviceSeoMap[id] && serviceSeoMap[id].slug;
+        return slug ? `${slug}.html` : `service-detail.html?service=${encodeURIComponent(id)}`;
+    };
+
+    const upsertMeta = (name, content) => {
+        if (!content) return;
+        let tag = document.querySelector(`meta[name="${name}"]`);
+        if (!tag) {
+            tag = document.createElement('meta');
+            tag.setAttribute('name', name);
+            document.head.appendChild(tag);
+        }
+        tag.setAttribute('content', content);
+    };
+
+    const setCanonical = (url) => {
+        let canonical = document.querySelector('link[rel="canonical"]');
+        if (!canonical) {
+            canonical = document.createElement('link');
+            canonical.setAttribute('rel', 'canonical');
+            document.head.appendChild(canonical);
+        }
+        canonical.setAttribute('href', url);
+    };
+
     // Get service ID from URL parameter
     const urlParams = new URLSearchParams(window.location.search);
-    const serviceId = urlParams.get('service');
+    let serviceId = urlParams.get('service');
+    if (!serviceId) {
+        const path = window.location.pathname.split('/').filter(Boolean).pop() || '';
+        const slug = path.replace(/\.html$/i, '').toLowerCase();
+        serviceId = slugToServiceId[slug] || '';
+    }
     
     if (!serviceId) {
         // Redirect to services page if no service ID
@@ -31,8 +149,13 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('Benefits:', service.benefits);
     console.log('FAQs:', service.faqs);
     
-    // Update page title
-    document.title = `${service.title} - Pinakkaa`;
+    // Update page SEO title/description/canonical
+    const seo = serviceSeoMap[service.id];
+    document.title = seo ? seo.title : `${service.title} - Pinakkaa`;
+    upsertMeta('description', seo ? seo.description : service.shortDescription);
+    if (seo && seo.slug) {
+        setCanonical(`https://pinakkaa.com/${seo.slug}`);
+    }
     
     // Update hero section
     const serviceTitleText = document.getElementById('serviceTitleText');
@@ -672,7 +795,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const otherServices = servicesData.filter(s => s.id !== serviceId).slice(0, 5);
         
         sidebarServicesList.innerHTML = otherServices.map(s => 
-            `<li><a href="service-detail.html?service=${s.id}">${s.title}</a></li>`
+            `<li><a href="${getServiceUrl(s.id)}">${s.title}</a></li>`
         ).join('');
     }
     
@@ -790,7 +913,7 @@ function loadRelatedServices(currentService) {
         </h3>
         <div class="related-services-grid">
             ${otherServices.map((service, index) => `
-                <a href="service-detail.html?service=${service.id}" class="related-service-card fade-in" style="animation-delay: ${index * 0.1}s">
+                <a href="${getServiceUrl(service.id)}" class="related-service-card fade-in" style="animation-delay: ${index * 0.1}s">
                     <div class="related-service-image">
                         ${service.video ? `
                             <video autoplay loop muted playsinline>

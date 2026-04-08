@@ -1005,6 +1005,28 @@ const addCursorEffect = () => {
 // Load services on services.html page
 document.addEventListener('DOMContentLoaded', function() {
     const servicesGrid = document.getElementById('servicesGrid');
+    const serviceSlugMap = {
+        'website-designing': 'website-designing-agency-in-bangalore',
+        'seo-digital-marketing': 'seo-company-in-bangalore',
+        'social-media-optimization': 'social-media-optimization-services-bangalore',
+        'online-reputation-management': 'orm-services-in-bangalore',
+        'search-engine-marketing': 'search-engine-marketing-agency-bangalore',
+        'social-media-marketing': 'social-media-marketing-company-in-bangalore',
+        'branding-rebranding': 'branding-rebranding-agency-bangalore',
+        'display-advertising': 'display-advertising-agency-bangalore',
+        'ecommerce-solutions': 'ecommerce-marketing-agency-bangalore',
+        'pr-marketing-services': 'pr-and-marketing-agency-bangalore',
+        'software-development': 'software-development-company-bangalore',
+        'api-integration': 'api-integration-services-bangalore',
+        'email-marketing': 'email-marketing-company-in-bangalore',
+        'sms-marketing': 'sms-marketing-company-in-bangalore',
+        'whatsapp-marketing': 'whatsapp-marketing-services-bangalore',
+        'shopify-website-development': 'shopify-website-development-services-in-bangalore'
+    };
+    const getServiceUrl = (id) => {
+        const slug = serviceSlugMap[id];
+        return slug ? `${slug}.html` : `service-detail.html?service=${id}`;
+    };
     
     if (servicesGrid) {
         // Show only services that have complete detail-page content.
@@ -1022,7 +1044,7 @@ document.addEventListener('DOMContentLoaded', function() {
             serviceCard.style.animationDelay = `${index * 0.1}s`;
             
             serviceCard.innerHTML = `
-                <a href="service-detail.html?service=${service.id}">
+                <a href="${getServiceUrl(service.id)}">
                     <div class="service-image-main">
                         <img src="${service.image}" alt="${service.title}" loading="lazy">
                     </div>
